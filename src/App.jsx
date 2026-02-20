@@ -299,7 +299,7 @@ const App = () => {
           {['Menu', 'About', 'Location', 'Order'].map((item) => (
             <a 
               key={item} 
-              href={`#${item.toLowerCase()}`}
+              href={`${import.meta.env.BASE_URL}#${item.toLowerCase()}`}
               className="hover:text-[#2dd4bf] transition-colors relative group"
               onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
             >
@@ -323,7 +323,7 @@ const App = () => {
           {['Menu', 'About', 'Location', 'Order'].map((item) => (
             <a 
               key={item} 
-              href={`#${item.toLowerCase()}`}
+              href={`${import.meta.env.BASE_URL}#${item.toLowerCase()}`}
               onClick={() => setMenuOpen(false)}
               className="text-white hover:text-[#2dd4bf] italic"
             >
@@ -358,24 +358,26 @@ const App = () => {
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-             <button 
+             <a 
+               href={`${import.meta.env.BASE_URL}#menu`}
                onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-               className="px-8 py-4 bg-[#2dd4bf] text-black font-sans-grotesk font-bold uppercase tracking-wider hover:bg-white transition-colors duration-300"
+               className="px-8 py-4 bg-[#2dd4bf] text-black font-sans-grotesk font-bold uppercase tracking-wider hover:bg-white transition-colors duration-300 text-center no-underline"
              >
                View Menu
-             </button>
-             <button 
+             </a>
+             <a 
+               href={`${import.meta.env.BASE_URL}#location`}
                onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-               className="px-8 py-4 border border-white/30 text-white font-sans-grotesk font-bold uppercase tracking-wider hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+               className="px-8 py-4 border border-white/30 text-white font-sans-grotesk font-bold uppercase tracking-wider hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-center no-underline"
              >
                Find Us
-             </button>
+             </a>
           </div>
         </div>
 
-        <div className="absolute bottom-10 animate-bounce">
-          <ArrowDown className="text-white/50 w-6 h-6" />
-        </div>
+        <a href={`${import.meta.env.BASE_URL}#about`} className="absolute bottom-10 animate-bounce text-white/50 hover:text-white transition-colors" aria-label="Scroll to about">
+          <ArrowDown className="w-6 h-6" />
+        </a>
       </header>
 
       {/* Infinite Marquee */}
