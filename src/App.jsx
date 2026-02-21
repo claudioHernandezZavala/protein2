@@ -679,9 +679,6 @@ const BigImageCard = ({ item, onEnter, onLeave }) => (
            <span className="text-xs uppercase tracking-widest font-bold text-gray-300 border border-white/20 px-2 py-1 rounded-sm">
              {item.protein}
            </span>
-           <button className="text-[#2dd4bf] opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300 font-sans-grotesk uppercase text-xs font-bold tracking-widest">
-             Add to Order →
-           </button>
         </div>
     </div>
   </div>
